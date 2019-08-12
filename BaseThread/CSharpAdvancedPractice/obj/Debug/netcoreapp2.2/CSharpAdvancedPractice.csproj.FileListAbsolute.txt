@@ -1,0 +1,11 @@
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\bin\Debug\netcoreapp2.2\CSharpAdvancedPractice.deps.json
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\bin\Debug\netcoreapp2.2\CSharpAdvancedPractice.runtimeconfig.json
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\bin\Debug\netcoreapp2.2\CSharpAdvancedPractice.runtimeconfig.dev.json
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\bin\Debug\netcoreapp2.2\CSharpAdvancedPractice.dll
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\bin\Debug\netcoreapp2.2\CSharpAdvancedPractice.pdb
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\obj\Debug\netcoreapp2.2\CSharpAdvancedPractice.csprojAssemblyReference.cache
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\obj\Debug\netcoreapp2.2\CSharpAdvancedPractice.csproj.CoreCompileInputs.cache
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\obj\Debug\netcoreapp2.2\CSharpAdvancedPractice.AssemblyInfoInputs.cache
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\obj\Debug\netcoreapp2.2\CSharpAdvancedPractice.AssemblyInfo.cs
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\obj\Debug\netcoreapp2.2\CSharpAdvancedPractice.dll
+C:\Users\chenjie\source\repos\CSharpAdvancedPractice\obj\Debug\netcoreapp2.2\CSharpAdvancedPractice.pdb
