@@ -16,11 +16,49 @@ namespace CSharpAdvancedPractice.D1
             Thread t1 = new Thread(new ThreadStart(PrintNumbers));//无参数的委托
             t1.Start();
 
-            Thread t2 = new Thread(new ParameterizedThreadStart(PrintNumbers));
+            Thread t2 = new Thread(new ParameterizedThreadStart(PrintNumbers));//有参数的委托
             t2.Start(15);
             Console.ReadLine();
         }
-
+        /// <summary>
+        /// 线程休眠
+        /// </summary>
+        public static void SleepThread()
+        {
+            Thread t1 = new Thread(PrintNumberSWithDelay);
+            t1.Start();
+            PrintNumbers();
+            Console.ReadLine();
+        }
+        /// <summary>
+        /// 线程等待
+        /// </summary>
+        public static void AwaitThread()
+        {
+            Console.WriteLine("线程等待开始工作");
+            Thread t = new Thread(PrintNumberSWithDelay);
+            t.Start();
+            //使用Join暂停线程，会等到t运行完之后在执行后面的线程操作
+            t.Join();
+            PrintNumbers();
+            Console.WriteLine("线程完成");
+            Console.ReadLine();
+        }
+        /// <summary>
+        /// 中止线程
+        /// </summary>
+        public static void AbortThread()
+        {
+            Console.WriteLine("开始运行程序");
+            Thread t1 = new Thread(PrintNumberSWithDelay);
+            t1.Start();
+            Thread.Sleep(TimeSpan.FromSeconds(6));
+            t1.Abort();
+            Console.WriteLine("线程t1终止线程");
+            Thread t2 = new Thread(new ThreadStart(PrintNumbers));
+            PrintNumbers();
+            Console.ReadLine();
+        }
         /// <summary>
         /// 输出数字方法不带参数
         /// </summary>
@@ -33,7 +71,7 @@ namespace CSharpAdvancedPractice.D1
             }
         }
         /// <summary>
-        /// 输出数字方法带参数，使用ParameterizedThreadStart，定义的参数必须为object
+        /// 输出数字方法带参数，使用ParameterizedThreadStart，定义的参数必须为Object
         /// </summary>
         /// <param name="count"></param>
         static void PrintNumbers(Object count)
@@ -52,6 +90,7 @@ namespace CSharpAdvancedPractice.D1
             Console.WriteLine("开始运行...");
             for (int i = 0; i < 10; i++)
             {
+                //每运行一次线程休眠2秒
                 Thread.Sleep(TimeSpan.FromSeconds(2));
                 Console.WriteLine(i);
             }

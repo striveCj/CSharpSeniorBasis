@@ -8,7 +8,13 @@ namespace CSharpAdvancedPractice
         static void Main(string[] args)
         {
             //创建线程
-            BaseThread.CreateThread();
+            //BaseThread.CreateThread();
+            //线程休眠
+            //BaseThread.SleepThread();
+            //线程等待
+            //BaseThread.AwaitThread();
+            //中止线程core的控制台不支持
+            //BaseThread.AbortThread();
 
         }
     }
