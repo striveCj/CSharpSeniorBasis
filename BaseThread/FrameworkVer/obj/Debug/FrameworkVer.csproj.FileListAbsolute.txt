@@ -1,0 +1,7 @@
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\obj\Debug\FrameworkVer.csprojAssemblyReference.cache
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\obj\Debug\FrameworkVer.csproj.CoreCompileInputs.cache
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\bin\Debug\FrameworkVer.exe.config
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\bin\Debug\FrameworkVer.exe
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\bin\Debug\FrameworkVer.pdb
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\obj\Debug\FrameworkVer.exe
+C:\Users\chenjie\Source\Repos\striveCj\CSharpSeniorBasis\BaseThread\FrameworkVer\obj\Debug\FrameworkVer.pdb

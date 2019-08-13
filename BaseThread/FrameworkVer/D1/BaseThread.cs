@@ -1,9 +1,10 @@
-﻿using System;
+﻿using FrameworkVer.D1.Other;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace CSharpAdvancedPractice.D1
+namespace FrameworkVer.D1
 {
     public class BaseThread
     {
@@ -77,13 +78,33 @@ namespace CSharpAdvancedPractice.D1
             }
             Thread.Sleep(TimeSpan.FromSeconds(6));
             t1.Abort();
-            Console.WriteLine("thread t1 has been aborted");
+            Console.WriteLine("线程t1终结");
             Console.WriteLine(t1.ThreadState.ToString());
             Console.WriteLine(t2.ThreadState.ToString());
             Console.ReadLine();
 
         }
 
+
+        /// <summary>
+        /// 运行线程
+        /// </summary>
+        static void RunThreads()
+        {
+            var sample = new ThreadSample();
+            var t1 = new Thread(sample.CountNumbers);
+            t1.Name = "Thread One";
+            var t2 = new Thread(sample.CountNumbers);
+            t2.Name = "Thread Two";
+
+            t1.Priority = ThreadPriority.Highest;//设置线程的优先级
+            t2.Priority = ThreadPriority.Lowest;
+            t1.Start();
+            t2.Start();
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            sample.Stop();
+
+        }
         /// <summary>
         /// 输出数字方法不带参数
         /// </summary>

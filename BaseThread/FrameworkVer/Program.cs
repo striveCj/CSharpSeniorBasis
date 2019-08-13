@@ -1,7 +1,11 @@
-﻿using CSharpAdvancedPractice.D1;
+﻿using FrameworkVer.D1;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CSharpAdvancedPractice
+namespace FrameworkVer
 {
     class Program
     {
@@ -16,8 +20,7 @@ namespace CSharpAdvancedPractice
             //中止线程core的控制台不支持
             //BaseThread.AbortThread();
             //检查线程状态
-              BaseThread.CheckThreadState();
-
+            BaseThread.CheckThreadState();
         }
     }
 }
