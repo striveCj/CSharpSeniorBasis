@@ -1,6 +1,7 @@
 ﻿using FrameworkVer.D1.Other;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Threading;
 
@@ -84,7 +85,20 @@ namespace FrameworkVer.D1
             Console.ReadLine();
 
         }
-
+        /// <summary>
+        /// 线程优先级
+        /// </summary>
+        public static void SetThreadPriority()
+        {
+            Console.WriteLine($"当前线程优先级{Thread.CurrentThread.Priority}");
+            Console.WriteLine("运行所有可用核心");
+            RunThreads();
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            Console.WriteLine("运行单核心");
+            Process.GetCurrentProcess().ProcessorAffinity = new IntPtr(1);
+            RunThreads();
+            Console.ReadLine();
+        }
 
         /// <summary>
         /// 运行线程

@@ -20,7 +20,9 @@ namespace FrameworkVer
             //中止线程core的控制台不支持
             //BaseThread.AbortThread();
             //检查线程状态
-            BaseThread.CheckThreadState();
+            //BaseThread.CheckThreadState();
+            //线程优先级
+            BaseThread.SetThreadPriority();
         }
     }
 }
