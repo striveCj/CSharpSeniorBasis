@@ -22,7 +22,9 @@ namespace FrameworkVer
             //检查线程状态
             //BaseThread.CheckThreadState();
             //线程优先级
-            BaseThread.SetThreadPriority();
+            //BaseThread.SetThreadPriority();
+            //前台线程和后台线程
+            BaseThread.qahThread();
         }
     }
 }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="D1\BaseThread.cs" />
+    <Compile Include="D1\Other\ThreadSample2.cs" />
     <Compile Include="D1\Other\ThreadSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

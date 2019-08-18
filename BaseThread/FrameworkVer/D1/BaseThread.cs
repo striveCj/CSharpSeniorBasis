@@ -99,6 +99,22 @@ namespace FrameworkVer.D1
             RunThreads();
             Console.ReadLine();
         }
+        /// <summary>
+        /// 前台线程和后台线程
+        /// </summary>
+        public static void qahThread()
+        {
+            var sampleForground = new ThreadSample2(10);
+            var sampleBackground = new ThreadSample2(20);
+            var t1 = new Thread(sampleForground.CountNumbers);
+            t1.Name = "ForegroundThread";   //没有明确声明的均为前台线程
+            var t2 = new Thread(sampleBackground.CountNumbers);
+            t2.Name = "BackgroundThread";
+            t2.IsBackground = true;    //设置为后台线程
+
+            t1.Start();
+            t2.Start();
+        }
 
         /// <summary>
         /// 运行线程
