@@ -192,5 +192,24 @@ namespace FrameworkVer.D1
         {
             Thread.Sleep(TimeSpan.FromSeconds(2));
         }
+
+        static void Count(object iterations)
+        {
+            CountNumbers((int)iterations);
+        }
+
+        static void CountNumbers(int iterations)
+        {
+            for (int i = 1; i <= iterations; i++)
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(0.5));
+                Console.WriteLine($"{Thread.CurrentThread.Name} prints {i}");
+            }
+        }
+
+        static void PrintNumber(int number)
+        {
+            Console.WriteLine(number);
+        }
     }
 }
