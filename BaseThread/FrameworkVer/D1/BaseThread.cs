@@ -115,6 +115,42 @@ namespace FrameworkVer.D1
             t1.Start();
             t2.Start();
         }
+        /// <summary>
+        /// 向线程传递参数
+        /// </summary>
+        public static void test()
+        {
+            ThreadSample2 sample = new ThreadSample2(5);
+
+            Thread t1 = new Thread(sample.CountNumbers);
+            t1.Name = "ThreadOne";
+            t1.Start();
+            t1.Join();
+            Console.WriteLine("--------------------------");
+
+            Thread t2 = new Thread(Count);
+            t2.Name = "ThreadTwo";
+            t2.Start(3);
+            t2.Join();
+            Console.WriteLine("--------------------------");
+
+            //使用lambda表达式引用另一个C#对方的方式被称为闭包。当在lambda表达式中使用任何局部变量时，C#会生成一个类，并将该变量作为该类的一个属性，但是我们无须定义该类，C#编译器会自动帮我们实现
+            Thread t3 = new Thread(() => CountNumbers(5));
+            t3.Name = "ThreadThree";
+            t3.Start();
+            t3.Join();
+            Console.WriteLine("--------------------------");
+
+            int i = 10;
+            Thread t4 = new Thread(() => PrintNumber(i));
+
+            i = 20;
+            Thread t5 = new Thread(() => PrintNumber(i));
+            t4.Start();
+            t5.Start();
+            //t4, t5都会输出20， 因为t4，t5没有Start之前i已经变成20了
+            Console.ReadKey();
+        }
 
         /// <summary>
         /// 运行线程
