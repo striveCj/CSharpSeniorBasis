@@ -118,7 +118,7 @@ namespace FrameworkVer.D1
         /// <summary>
         /// 向线程传递参数
         /// </summary>
-        public static void test()
+        public static void PassThread()
         {
             ThreadSample2 sample = new ThreadSample2(5);
 
@@ -151,7 +151,47 @@ namespace FrameworkVer.D1
             //t4, t5都会输出20， 因为t4，t5没有Start之前i已经变成20了
             Console.ReadKey();
         }
+        /// <summary>
+        /// 使用lock锁
+        /// </summary>
+        public static void LockThread()
+        {
+            Console.WriteLine("Incorrect Counter");
+            Counter c1 = new Counter();
+            var t1 = new Thread(() => TestCounter(c1));
+            var t2 = new Thread(() => TestCounter(c1));
+            var t3 = new Thread(() => TestCounter(c1));
+            t1.Start();
+            t2.Start();
+            t3.Start();
+            t1.Join();
+            t2.Join();
+            t3.Join();
+            Console.WriteLine($"Total Count: {c1.Count}");
+            Console.WriteLine("------------------------");
 
+            Console.WriteLine("Correct counter");
+            CounterWithLock c2 = new CounterWithLock();
+            t1 = new Thread(() => TestCounter(c2));
+            t2 = new Thread(() => TestCounter(c2));
+            t3 = new Thread(() => TestCounter(c2));
+            t1.Start();
+            t2.Start();
+            t3.Start();
+            t1.Join();
+            t2.Join();
+            t3.Join();
+            Console.WriteLine($"Total count:{c2.Count}");
+            Console.ReadLine();
+        }
+        static void TestCounter(CounterBase c)
+        {
+            for (int i = 0; i < 100000; i++)
+            {
+                c.Increment();
+                c.Decrement();
+            }
+        }
         /// <summary>
         /// 运行线程
         /// </summary>

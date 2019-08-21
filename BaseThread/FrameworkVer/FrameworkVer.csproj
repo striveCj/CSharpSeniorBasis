@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="D1\BaseThread.cs" />
+    <Compile Include="D1\Other\Counter.cs" />
+    <Compile Include="D1\Other\CounterBase.cs" />
+    <Compile Include="D1\Other\CounterWithLock.cs" />
     <Compile Include="D1\Other\ThreadSample2.cs" />
     <Compile Include="D1\Other\ThreadSample.cs" />
     <Compile Include="Program.cs" />
