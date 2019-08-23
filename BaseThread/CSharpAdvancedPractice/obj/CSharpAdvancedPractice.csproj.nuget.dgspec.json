@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chenjie\\Source\\Repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj": {}
+    "C:\\Users\\chenjie\\source\\repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chenjie\\Source\\Repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj": {
+    "C:\\Users\\chenjie\\source\\repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chenjie\\Source\\Repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj",
+        "projectUniqueName": "C:\\Users\\chenjie\\source\\repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj",
         "projectName": "CSharpAdvancedPractice",
-        "projectPath": "C:\\Users\\chenjie\\Source\\Repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj",
+        "projectPath": "C:\\Users\\chenjie\\source\\repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\CSharpAdvancedPractice.csproj",
         "packagesPath": "C:\\Users\\chenjie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chenjie\\Source\\Repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\obj\\",
+        "outputPath": "C:\\Users\\chenjie\\source\\repos\\striveCj\\CSharpSeniorBasis\\BaseThread\\CSharpAdvancedPractice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",

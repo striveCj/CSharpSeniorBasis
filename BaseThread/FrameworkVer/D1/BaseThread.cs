@@ -114,6 +114,7 @@ namespace FrameworkVer.D1
 
             t1.Start();
             t2.Start();
+            //后台线程停止了前台线程还能使用，前台线程停止了后台线程一定不能使用
         }
         /// <summary>
         /// 向线程传递参数

@@ -24,9 +24,9 @@ namespace FrameworkVer
             //线程优先级
             //BaseThread.SetThreadPriority();
             //前台线程和后台线程
-            //BaseThread.qahThread();
+            BaseThread.qahThread();
             //向线程传递参数
-            BaseThread.PassThread();
+            //BaseThread.PassThread();
 
         }
     }
