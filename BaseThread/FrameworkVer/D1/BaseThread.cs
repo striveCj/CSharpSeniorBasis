@@ -222,6 +222,21 @@ namespace FrameworkVer.D1
             */
 
         }
+        public void TryErrorThread()
+        {
+            Thread t = new Thread(FaultyThread);
+            t.Start();
+            t.Join();
+            try
+            {
+                t = new Thread(BadFaultyThread);
+                t.Start();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("We won't get here");
+            }
+        }
         static void TestCounter(CounterBase c)
         {
             for (int i = 0; i < 100000; i++)
@@ -332,6 +347,27 @@ namespace FrameworkVer.D1
         static void PrintNumber(int number)
         {
             Console.WriteLine(number);
+        }
+
+        static void BadFaultyThread()
+        {
+            Console.WriteLine("Starting a faulty thread.....");
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            //这个异常主线程无法捕捉到，因为是在子线程抛出的异常。需要在子线程中加入try...catch捕获异常
+            throw new Exception("Boom!");
+        }
+        static void FaultyThread()
+        {
+            try
+            {
+                Console.WriteLine("Starting a faulty thread...");
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                throw new Exception("Boom");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception handled: {ex.Message}");
+            }
         }
     }
 }
