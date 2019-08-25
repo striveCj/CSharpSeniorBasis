@@ -188,7 +188,7 @@ namespace FrameworkVer.D1
         /// <summary>
         /// Monitors锁
         /// </summary>
-        public void MonitorThread()
+        public static void MonitorThread()
         {
             object lock1 = new object();
             object lock2 = new object();
