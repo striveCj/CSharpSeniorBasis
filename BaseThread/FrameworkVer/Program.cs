@@ -30,7 +30,9 @@ namespace FrameworkVer
             //lock线程锁
             //BaseThread.LockThread();
             //MonitorThread锁
-            BaseThread.MonitorThread();
+            //BaseThread.MonitorThread();
+            //异常处理
+            BaseThread.TryErrorThread();
 
         }
     }

@@ -222,7 +222,7 @@ namespace FrameworkVer.D1
             */
 
         }
-        public void TryErrorThread()
+        public static void TryErrorThread()
         {
             Thread t = new Thread(FaultyThread);
             t.Start();
